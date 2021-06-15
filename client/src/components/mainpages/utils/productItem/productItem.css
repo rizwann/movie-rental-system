@@ -53,6 +53,17 @@
     background: #555;
     margin-right: 5px;
 }
+#btn_buy:hover{
+    background: #4CAF50;
+}
+#btn_delete{
+    background: #555;
+    margin-right: 5px;
+
+}
+#btn_delete:hover{
+    background: red;
+}
 #btn_view{
     background: teal;
     margin-left: 5px;

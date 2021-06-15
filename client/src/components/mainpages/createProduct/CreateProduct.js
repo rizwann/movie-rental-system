@@ -12,7 +12,7 @@ const initialState = {
     content: 'Contents',
     category: '',
     _id: '',
-    trailer:''
+    trailer:'Paste your movie trailer link here'
 }
 
 function CreateProduct() {
@@ -139,7 +139,7 @@ function CreateProduct() {
 
             <form onSubmit={handleSubmit}>
                 <div className="row">
-                    <label htmlFor="product_id">Product ID</label>
+                    <label htmlFor="product_id">Movie ID</label>
                     <input type="text" name="product_id" id="product_id" required
                     value={product.product_id} onChange={handleChangeInput} disabled={onEdit} />
                 </div>
@@ -176,9 +176,9 @@ function CreateProduct() {
 
 
                 <div className="row">
-                    <label htmlFor="categories">Categories: </label>
+                    <label htmlFor="categories">Genres: </label>
                     <select name="category" value={product.category} onChange={handleChangeInput} >
-                        <option value="">Please select a category</option>
+                        <option value="">Please select a genre</option>
                         {
                             categories.map(category => (
                                 <option value={category._id} key={category._id}>
@@ -189,7 +189,7 @@ function CreateProduct() {
                     </select>
                 </div>
 
-                <button type="submit">{onEdit? "Update" : "Create"}</button>
+                <button className='btn1' type="submit">{onEdit? "Update" : "Create"}</button>
             </form>
         </div>
     )

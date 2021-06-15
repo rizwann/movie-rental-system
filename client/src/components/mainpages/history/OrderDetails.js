@@ -45,8 +45,8 @@ function OrderDetails() {
                 <thead>
                     <tr>
                         <th></th>
-                        <th>Products</th>
-                        <th>Quantity</th>
+                        <th>Movies</th>
+                        <th>Duration</th>
                         <th>Price</th>
                     </tr>
                 </thead>
@@ -54,9 +54,10 @@ function OrderDetails() {
                     {
                         orderDetails.cart.map(item =>(
                         <tr key={item._id}>
+                            {console.log(item.images.url)}
                             <td><img src={item.images.url} alt="" /></td>
                             <td>{item.title}</td>
-                            <td>{item.quantity}</td>
+                            <td>{item.quantity} week</td>
                             <td>$ {item.price * item.quantity}</td>
                         </tr>
                         ))

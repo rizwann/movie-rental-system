@@ -93,14 +93,14 @@ const productCtrl = {
     },
     updateProduct: async(req, res) =>{
         try {
-            const {title, price, description, content, images, category} = req.body;
-            if(!images) return res.status(400).json({msg: "No image upload"})
+            const {title, price, description, content, images, category, trailer} = req.body;
+            if(!images) return res.status(400).json({msg: "No image uploaded"})
 
             await Products.findOneAndUpdate({_id: req.params.id}, {
                 title: title.toLowerCase(), price, description, content, images, category, trailer
             })
 
-            res.json({msg: "Updated a Product"})
+            res.json({msg: `Updated the movie ${title}`})
         } catch (err) {
             return res.status(500).json({msg: err.message})
         }
