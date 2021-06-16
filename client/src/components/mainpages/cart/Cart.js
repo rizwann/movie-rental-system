@@ -2,6 +2,7 @@ import React, {useContext, useState, useEffect} from 'react'
 import {GlobalState} from '../../../GlobalState'
 import axios from 'axios'
 import PaypalButton from './PaypalButton'
+import Login from '../auth/Login'
 
 function Cart() {
     const state = useContext(GlobalState)
@@ -78,8 +79,8 @@ function Cart() {
 
 
     if(cart.length === 0) 
-        return <h2 style={{textAlign: "center", fontSize: "5rem"}}>Cart Empty</h2> 
-
+        return <Login/>
+         
     return (
         <div>
             {
