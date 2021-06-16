@@ -1,7 +1,7 @@
 import React from 'react'
 import BtnRender from './BtnRender'
 
-function ProductItem({product, isAdmin, deleteProduct, handleCheck}) {
+function ProductItem({product, isLogged, isAdmin, deleteProduct, handleCheck}) {
 
     return (
         <div className="product_card">
@@ -18,7 +18,7 @@ function ProductItem({product, isAdmin, deleteProduct, handleCheck}) {
             </div>
 
             
-            <BtnRender product={product} deleteProduct={deleteProduct} />
+            <BtnRender isLogged={isLogged} product={product} deleteProduct={deleteProduct} />
         </div>
     )
 }

@@ -12,6 +12,7 @@ function Products() {
     const [products, setProducts] = state.productsAPI.products
     const [isAdmin] = state.userAPI.isAdmin
     const [token] = state.token
+    const[isLogged]= state.userAPI.isLogged
     const [callback, setCallback] = state.productsAPI.callback
     const [loading, setLoading] = useState(false)
     const [isCheck, setIsCheck] = useState(false)
@@ -74,7 +75,7 @@ function Products() {
             {
                 products.map(product => {
                     return <ProductItem key={product._id} product={product}
-                    isAdmin={isAdmin} deleteProduct={deleteProduct} handleCheck={handleCheck} />
+                    isAdmin={isAdmin} isLogged={isLogged} deleteProduct={deleteProduct} handleCheck={handleCheck} />
                 })
             } 
         </div>

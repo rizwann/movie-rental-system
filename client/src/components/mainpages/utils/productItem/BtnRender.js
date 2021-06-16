@@ -1,12 +1,22 @@
 import React, {useContext} from 'react'
 import {Link} from 'react-router-dom'
 import {GlobalState} from '../../../../GlobalState'
+import {toast} from 'react-toastify'
 
-function BtnRender({product, deleteProduct}) {
+
+
+function BtnRender({product, deleteProduct, isLogged}) {
     const state = useContext(GlobalState)
     const [isAdmin] = state.userAPI.isAdmin
     const addCart = state.userAPI.addCart
 
+
+function toastMsg(){
+         // history.push('/login');
+         alert("Please login to continue buying")
+ 
+    
+}
     
     return (
         <div className="row_btn">
@@ -22,9 +32,11 @@ function BtnRender({product, deleteProduct}) {
                     </Link>
                 </>
                 : <>
-                    <Link id="btn_buy" to="#!" onClick={() => addCart(product)}>
+                    {isLogged ? <Link id="btn_buy" to="#!" onClick={() => addCart(product)}>
                         Rent
-                    </Link>
+                    </Link>: <Link id="btn_buy" to="/login" onClick={()=>toastMsg()} >
+                        Rent
+                    </Link>}
                     <Link id="btn_view" to={`/detail/${product._id}`}>
                         View
                     </Link>
