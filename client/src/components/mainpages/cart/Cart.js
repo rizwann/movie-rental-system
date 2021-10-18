@@ -75,11 +75,12 @@ function Cart() {
         setCart([])
         addToCart([])
         alert("You have successfully placed an order.")
+        // this.props.history.push('/')
     }
 
 
     if(cart.length === 0) 
-        return <Login/>
+        return <h1 style={{textAlign:"center"}}>The Cart is <span style={{color:"red"}}>Empty</span></h1>
          
     return (
         <div>

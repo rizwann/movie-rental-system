@@ -1,2 +1,4 @@
+.env.MONGODB_URL 
+
 node_modules
-.env
+
