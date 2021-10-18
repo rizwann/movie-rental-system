@@ -1,7 +1,7 @@
 # MERN Stack - MOVIE RENTAL SYSTEM
 > This is built with the MERN stack using React Context API for state management, pure CSS for style
 
-## Demo: movie-rental-system.herokuapp.com/
+## Demo: https://movie-rental-system.herokuapp.com/
 
 ## Author: Rizwan Kabir
 
