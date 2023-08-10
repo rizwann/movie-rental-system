@@ -9,7 +9,12 @@ function BtnRender({product, deleteProduct, isLogged}) {
     const [isAdmin] = state.userAPI.isAdmin
     const addCart = state.userAPI.addCart
 
-
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
 function toastMsg(){
          // history.push('/login');
          alert("Please login to continue buying")
@@ -36,7 +41,7 @@ function toastMsg(){
                     </Link>: <Link id="btn_buy" to="/login" onClick={()=>toastMsg()} >
                         Rent
                     </Link>}
-                    <Link id="btn_view" to={`/detail/${product._id}`}>
+                    <Link id="btn_view" to={`/detail/${product._id}`} onClick={scrollToTop}>
                         View
                     </Link>
                 </>
