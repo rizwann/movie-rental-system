@@ -1,2 +1,3 @@
 /api/* https://lively-bull-flannel-nightgown.cyclic.app/api/:splat 200
+/user/* https://lively-bull-flannel-nightgown.cyclic.app/user/:splat 200
 /* /index.html 200
